@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,4 +33,30 @@
     </div>
 </body>
 
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Data Store</h1>
+    <div>
+        {% if data_store %}
+            <ul>
+                {% for key, value in data_store.items() %}
+                    <li><strong>ID:</strong> {{ key }} <strong>Data:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
 </html>

@@ -179,9 +179,6 @@ body {
     transform: scale(1.09);
 }
 
-
-/* Responsive Design */
-
 /* For Mobile Devices */
 @media (max-width: 767px) {
     .context h1 {
